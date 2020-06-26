@@ -138,7 +138,7 @@ function Timer(toStop) {
         clearInterval(t);
         return showScore();
     }
-    let time = 30,
+    let time = 20 * 60,
         minutes, seconds;
     t = setInterval(() => {
         minutes = parseInt(time / 60, 10);
