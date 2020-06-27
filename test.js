@@ -84,9 +84,9 @@ function showQuest(index) {
             <div class="card-header">
                 <div class="input-group">
                     <div class="input-group-prepend">
-                        <span class="input-group-text">Q: </span>
+                        <span class="input-group-text">Q ${(index + 1) % (questions.length + 1)} : </span>
                     </div>
-                    <input type="text" class="form-control" placeholder="${questions[index].question}" aria-label="Question will appear Here" disabled />
+                    <p>${questions[index].question} </p>
                 </div>
             </div>
             <div class="card-body">
