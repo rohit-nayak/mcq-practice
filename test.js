@@ -48,6 +48,7 @@ async function getQuestion() {
 }
 
 function submitResponse(answer) {
+    //console.log(`title is => ${$('#qBox')[0].firstElementChild.title}`)
     const response = $("input[name='answer']:checked").val();
     //console.log(response == answer)
     if (response == answer) {
@@ -64,7 +65,11 @@ function submitResponse(answer) {
     }
     $('#score')[0].innerText = Score;
     $("input[name='answer']").prop('checked', false)
-    showQuest(Number($('#qBox')[0].firstElementChild.title + 1) % questions.length);
+        //console.log(`next question is => ${Number($('#qBox')[0].firstElementChild.title) % questions.length}`)
+    let nextQues = Number($('#qBox')[0].firstElementChild.title);
+    if (nextQues == questions.length)
+        nextQues = 0;
+    showQuest(nextQues);
 }
 
 function skip(index) {
@@ -79,6 +84,7 @@ function showQuest(index) {
         return skip((index + 1) % questions.length);
     } else
         current = index;
+    //console.log(index)
     const quest = `
         <div class="card" title="${(index) % questions.length}">
             <div class="card-header">
