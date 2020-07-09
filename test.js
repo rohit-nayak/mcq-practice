@@ -99,7 +99,7 @@ function showQuest(index) {
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
                         <div class="input-group-text">
-                            <input type="radio" value="a" name="answer" aria-label="Radio button for following text input" />
+                            <input type="radio" value="${questions[index].o13}" name="answer" aria-label="Radio button for following text input" />
                         </div>
                     </div>
                     <input type="text" class="form-control" placeholder="${questions[index].op1}" aria-label="Text input with radio button" disabled />
@@ -107,7 +107,7 @@ function showQuest(index) {
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
                         <div class="input-group-text">
-                            <input type="radio" aria-label="Radio button for following text input" value="b" name="answer" />
+                            <input type="radio" aria-label="Radio button for following text input" value="${questions[index].op2}" name="answer" />
                         </div>
                     </div>
                     <input type="text" class="form-control" placeholder="${questions[index].op2}" aria-label="Text input with radio button" disabled />
@@ -115,7 +115,7 @@ function showQuest(index) {
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
                         <div class="input-group-text">
-                            <input type="radio" aria-label="Radio button for following text input" value="c" name="answer" />
+                            <input type="radio" aria-label="Radio button for following text input" value="${questions[index].op3}" name="answer" />
                         </div>
                     </div>
                     <input type="text" class="form-control" placeholder="${questions[index].op3}" aria-label="Text input with radio button" disabled />
@@ -123,10 +123,18 @@ function showQuest(index) {
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
                         <div class="input-group-text">
-                            <input type="radio" aria-label="Radio button for following text input" value="d" name="answer" />
+                            <input type="radio" aria-label="Radio button for following text input" value="${questions[index].op4}" name="answer" />
                         </div>
                     </div>
                     <input type="text" class="form-control" placeholder="${questions[index].op4}" aria-label="Text input with radio button" disabled />
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <input type="radio" aria-label="Radio button for following text input" value="${questions[index].op5}" name="answer" />
+                        </div>
+                    </div>
+                    <input type="text" class="form-control" placeholder="${questions[index].op5}" aria-label="Text input with radio button" disabled />
                 </div>
             </div>
             <div class=" card-footer">
